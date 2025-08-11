@@ -1,3 +1,4 @@
+const theColor =  document.querySelector(".theColor");
 const colors = document.querySelector(".colors");
 const inputText =  document.getElementById("inputText");
 const addcustom =  document.getElementById("addcustom");
@@ -35,6 +36,8 @@ addcustom.addEventListener("click",()=>{
         color.addEventListener("click",function(){
             const colorcilicked = this.style.background;
             sColor.textContent = `the color you clicked is : ${colorcilicked}`
+            theColor.style.display = "block";
+            theColor.style.background = colorcilicked;
             lastClickedColor = colorcilicked;
         })
         
